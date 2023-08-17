@@ -1,0 +1,23 @@
+.movieCard{
+    background-color: var(--color-secondary);
+    display: grid;
+    grid-template-areas: "img title" "img rating";
+}
+
+.movieCard:hover{
+    background-color: var(--color-accent);
+}
+
+.movieCard img{
+    grid-area: img;
+    height: 200px;
+}
+
+.movieCard h3{
+    grid-area: title;
+}
+
+.rating{
+    text-align: center;
+    grid-area: rating;
+}
