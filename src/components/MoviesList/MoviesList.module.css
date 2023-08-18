@@ -1,5 +1,5 @@
 #moviesListContainer{
-    background-color: var(--color-primary);
+    background-color: var(--color-accent);
     width: 95vw;
     margin: auto;
     display: grid;

@@ -4,10 +4,12 @@
     left: 0;
     height: 40px;
     width: 100%;
-    background-color: var(--color-primary);
+    background-color: var(--color-secondary);
+    z-index: 9999;
 }
 
 .navStyle h1{
     padding-left: 15px;
-    text-shadow: 1px 1px black;
+    text-shadow: 1px 1px var(--color-accent);
+    color: var(--color-primary);
 }

@@ -11,13 +11,12 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.75);
-  background-color: #002626;
+  background-color: #444450;
 
-  --color-primary: #008080;
-  --color-primary-hover: #00caca;
-  --color-secondary: #002626;
-  --color-accent: #CC4B00;
-  --color-accent-hover: #ff9151;
+  --color-primary: #CC4B00;
+  --color-primary-hover: #ff9151;
+  --color-secondary: #222230;
+  --color-accent: #444450;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
