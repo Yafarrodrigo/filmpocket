@@ -8,9 +8,11 @@ type MoviesListProps = {movies: MoviesList}
 function MoviesListContainer({movies}:MoviesListProps) {
   
   return (
-    <Grid>
+    <Grid container>
       {movies.map( (mov,index) => (
-        <MovieCard key={index} movieDetails={mov} />
+        <Grid item sx={{padding:1}} key={index}>
+          <MovieCard movieDetails={mov} />
+        </Grid>
       ))}
     </Grid>
   )
