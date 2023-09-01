@@ -1,5 +1,7 @@
 import { useState } from 'react'
+import Filters from '../Filters/Filters'
 import MoviesListContainer from '../MoviesList/MoviesListContainer'
+import { Box } from '@mui/material'
 
 export type Movie = {
   title: string
@@ -30,7 +32,10 @@ function Home() {
   ])
 
   return (
-    <MoviesListContainer movies={moviesList}/>
+    <Box sx={{width:'100vw', display:'flex'}}>
+      <Filters />
+      <MoviesListContainer movies={moviesList}/>
+    </Box>
   )
 }
 

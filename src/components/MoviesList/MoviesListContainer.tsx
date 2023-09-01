@@ -1,20 +1,20 @@
 import { MoviesList } from "../Home/Home"
 import MovieCard from "../Movie/MovieCard"
 //import styles from "./MoviesList.module.css"
-import { Grid } from "@mui/material"
+import { Stack, Box } from '@mui/material';
 
 type MoviesListProps = {movies: MoviesList}
 
 function MoviesListContainer({movies}:MoviesListProps) {
   
   return (
-    <Grid container>
+    <Stack direction={'column'} spacing={'10px'} sx={{width: '100%', height:'92vh', margin:'10px', overflow:'auto'}} >
       {movies.map( (mov,index) => (
-        <Grid item sx={{padding:1}} key={index}>
-          <MovieCard movieDetails={mov} />
-        </Grid>
+        <Box>
+          <MovieCard movieDetails={mov} key={index}/>
+        </Box>
       ))}
-    </Grid>
+    </Stack>
   )
 }
 
