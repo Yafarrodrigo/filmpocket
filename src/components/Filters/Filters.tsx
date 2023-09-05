@@ -1,8 +1,9 @@
-import { Box, Stack, Select,InputLabel, MenuItem } from '@mui/material'
+import { Box, Stack, Select,InputLabel, MenuItem, Button } from '@mui/material'
 
 export default function Filters() {
   return (
-    <Box sx={{width: '175px'}}>
+    <Box sx={{width: '200px'}}>
+      <Button size='large' sx={{margin: '25px 10px', width: '90%', fontSize:'0.9rem'}} variant="outlined">Reset Filters</Button>
       <Stack>
       <InputLabel id="genre-select">Genre</InputLabel>
         <Select defaultValue={'all'}>
@@ -31,7 +32,6 @@ export default function Filters() {
           <MenuItem value={'3'}>rating &gt; 3</MenuItem>
           <MenuItem value={'4'}>rating &gt; 4</MenuItem>
           <MenuItem value={'5'}>rating &gt; 5</MenuItem>
-
         </Select>
       </Stack>
     </Box>
