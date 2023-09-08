@@ -10,8 +10,8 @@ function MoviesListContainer({movies}:MoviesListProps) {
   return (
     <Stack direction={'column'} spacing={'10px'} sx={{width: '100%', height:'92vh', margin:'10px', overflow:'auto'}} >
       {movies.map( (mov,index) => (
-        <Box>
-          <MovieCard movieDetails={mov} key={index}/>
+        <Box key={index}>
+          <MovieCard movieDetails={mov}/>
         </Box>
       ))}
     </Stack>
