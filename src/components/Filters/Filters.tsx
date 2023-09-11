@@ -1,12 +1,22 @@
 import { Box, Stack, Select,InputLabel, MenuItem, Button } from '@mui/material'
+import { SelectChangeEvent } from "@mui/material";
+import { useMoviesStore } from '../../store/movies'
 
 export default function Filters() {
+
+  const changeFilterValues = useMoviesStore( state => state.changeFilterValues)
+
+  const handleChange = (e:SelectChangeEvent<unknown>) => {
+    changeFilterValues(e.target.name, e.target.value as string)
+  }
+
+  const getFilterValues = useMoviesStore( state => state.filters) 
   return (
     <Box sx={{width: '200px'}}>
       <Button size='large' sx={{margin: '25px 10px', width: '90%', fontSize:'0.9rem'}} variant="outlined">Reset Filters</Button>
       <Stack>
       <InputLabel id="genre-select">Genre</InputLabel>
-        <Select defaultValue={'all'}>
+        <Select onChange={handleChange} name='genre' value={getFilterValues.genre}>
           <MenuItem value={'all'}>All</MenuItem>
           <MenuItem value={'aliens'} >Aliens</MenuItem>
           <MenuItem value={'space'} >Space</MenuItem>
@@ -14,7 +24,7 @@ export default function Filters() {
           <MenuItem value={'multiverse'} >Multiverse</MenuItem>
         </Select>
       <InputLabel id="year-select">Year</InputLabel>
-        <Select defaultValue={'2020'}>
+        <Select onChange={handleChange} name='year' value={getFilterValues.year}>
           <MenuItem value={'2020'}> &gt; 2020 </MenuItem>
           <MenuItem value={'2010'}> 2010 </MenuItem>
           <MenuItem value={'2000'}> 2000 </MenuItem>
@@ -25,7 +35,7 @@ export default function Filters() {
           <MenuItem value={'1950'}> &lt; 1950 </MenuItem>
         </Select>
         <InputLabel id="rating-select">Rating</InputLabel>
-        <Select defaultValue={'0'}>
+        <Select onChange={handleChange} name='rating' value={getFilterValues.rating}>
           <MenuItem value={'0'}>rating &gt; 0</MenuItem>
           <MenuItem value={'1'}>rating &gt; 1</MenuItem>
           <MenuItem value={'2'}>rating &gt; 2</MenuItem>
