@@ -8,6 +8,7 @@ interface state {
         genre: string,
         year: string,
         rating: string
+        search: string
     }
     getMovies: () => void,
     resetFilters: () => void
@@ -22,7 +23,8 @@ export const useMoviesStore = create<state>((set,get) => {
         filters: {
             genre: 'all',
             year: '2020',
-            rating: '0'
+            rating: '0',
+            search: ''
         },
         changeFilterValues: (which, value) => {
             set((state) => ({
@@ -37,9 +39,10 @@ export const useMoviesStore = create<state>((set,get) => {
             set((state) => ({
                 ...state,
                 filters: {
+                    ...state.filters,
                     year: '2020',
                     genre: 'all',
-                    rating: '0'
+                    rating: '0',
                 },
                 filteredMovies: [...state.movies]
             }))
@@ -49,7 +52,7 @@ export const useMoviesStore = create<state>((set,get) => {
             const rating = parseInt(get().filters.rating)
             set((state) => ({
                 ...state,
-                filteredMovies: state.movies.filter( mov => mov.year <= year && mov.rating >= rating)
+                filteredMovies: state.movies.filter( mov => mov.year <= year && mov.rating >= rating).filter(mov => mov.title.toLowerCase().includes(state.filters.search.toLowerCase()))
             }))
         },
         getMovies: () => {

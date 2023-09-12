@@ -8,7 +8,7 @@ type MoviesListProps = {movies: MoviesList}
 function MoviesListContainer({movies}:MoviesListProps) {
   
   return (
-    <Stack direction={'column'} flexWrap="wrap" gap={'10px'} sx={{width: '100%', maxHeight:'92vh', margin:'10px', overflow:'auto'}} >
+    <Stack direction={'row'} flexWrap="wrap" gap={'10px'} sx={{width: '100%', maxHeight:'92vh', margin:'10px', overflow:'auto'}} >
       {movies.map( (mov,index) => (
         <Box width={'32%'} key={index}>
           <MovieCard movieDetails={mov}/>
