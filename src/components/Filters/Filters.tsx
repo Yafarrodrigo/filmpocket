@@ -5,15 +5,18 @@ import { useMoviesStore } from '../../store/movies'
 export default function Filters() {
 
   const changeFilterValues = useMoviesStore( state => state.changeFilterValues)
+  const updateFilteredMovies = useMoviesStore( state => state.updateFilteredList)
+  const resetFilters = useMoviesStore( state => state.resetFilters)
 
   const handleChange = (e:SelectChangeEvent<unknown>) => {
     changeFilterValues(e.target.name, e.target.value as string)
+    updateFilteredMovies()
   }
 
   const getFilterValues = useMoviesStore( state => state.filters) 
   return (
     <Box sx={{width: '200px'}}>
-      <Button size='large' sx={{margin: '25px 10px', width: '90%', fontSize:'0.9rem'}} variant="outlined">Reset Filters</Button>
+      <Button size='large' sx={{margin: '25px 10px', width: '90%', fontSize:'0.9rem'}} onClick={resetFilters} variant="outlined">Reset Filters</Button>
       <Stack>
       <InputLabel id="genre-select">Genre</InputLabel>
         <Select onChange={handleChange} name='genre' value={getFilterValues.genre}>
