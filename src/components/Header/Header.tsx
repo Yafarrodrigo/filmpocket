@@ -1,6 +1,5 @@
-//import styles from "./headerStyles.module.css"
 import {AppBar,Toolbar, Typography, Box, InputBase, IconButton, Button} from '@mui/material'
-import { useMoviesStore } from '../../store/movies';
+import { useMoviesStore } from '../../store/moviesStore';
 import SearchIcon from '@mui/icons-material/Search';
 
 function Header() {

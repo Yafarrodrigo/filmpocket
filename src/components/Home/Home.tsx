@@ -1,17 +1,10 @@
 import Filters from '../Filters/Filters'
 import MoviesListContainer from '../MoviesList/MoviesListContainer'
 import { Box } from '@mui/material'
-import { useMoviesStore } from '../../store/movies'
+import { useMoviesStore } from '../../store/moviesStore'
 import { useEffect } from 'react'
+import { MoviesList } from '../../store/moviesStore'
 
-export type Movie = {
-  title: string
-  year: number
-  img: string
-  rating: number
-  genre: string
-}
-export type MoviesList = Movie[]
 
 function Home() {
 
@@ -20,7 +13,7 @@ function Home() {
     getMovies()
   }, [getMovies])
   
-  const moviesList = useMoviesStore( state => state.filteredMovies)
+  const moviesList:MoviesList = useMoviesStore( state => state.filteredMovies)
 
 
 

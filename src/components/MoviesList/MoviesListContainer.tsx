@@ -1,6 +1,5 @@
 import { MoviesList } from "../Home/Home"
 import MovieCard from "../Movie/MovieCard"
-//import styles from "./MoviesList.module.css"
 import { Stack, Box } from '@mui/material';
 
 type MoviesListProps = {movies: MoviesList}

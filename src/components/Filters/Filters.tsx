@@ -1,6 +1,6 @@
 import { Box, Stack, Select,InputLabel, MenuItem, Button } from '@mui/material'
 import { SelectChangeEvent } from "@mui/material";
-import { useMoviesStore } from '../../store/movies'
+import { useMoviesStore } from '../../store/moviesStore'
 
 export default function Filters() {
 
@@ -25,17 +25,19 @@ export default function Filters() {
           <MenuItem value={'space'} >Space</MenuItem>
           <MenuItem value={'timeTravel'} >Time Travel</MenuItem>
           <MenuItem value={'multiverse'} >Multiverse</MenuItem>
+          <MenuItem value={'futuristic'} >Futuristic</MenuItem>
         </Select>
       <InputLabel id="year-select">Year</InputLabel>
         <Select onChange={handleChange} name='year' value={getFilterValues.year}>
-          <MenuItem value={'2020'}> &gt; 2020 </MenuItem>
-          <MenuItem value={'2010'}> 2010 </MenuItem>
-          <MenuItem value={'2000'}> 2000 </MenuItem>
-          <MenuItem value={'1990'}> 1990 </MenuItem>
-          <MenuItem value={'1980'}> 1980 </MenuItem>
-          <MenuItem value={'1970'}> 1970 </MenuItem>
-          <MenuItem value={'1960'}> 1960 </MenuItem>
-          <MenuItem value={'1950'}> &lt; 1950 </MenuItem>
+          <MenuItem value={'1'}> All </MenuItem>
+          <MenuItem value={'2020'}> 2020 + </MenuItem>
+          <MenuItem value={'2010'}> 2010 + </MenuItem>
+          <MenuItem value={'2000'}> 2000 + </MenuItem>
+          <MenuItem value={'1990'}> 1990 + </MenuItem>
+          <MenuItem value={'1980'}> 1980 + </MenuItem>
+          <MenuItem value={'1970'}> 1970 + </MenuItem>
+          <MenuItem value={'1960'}> 1960 + </MenuItem>
+          <MenuItem value={'1950'}> ...1950 + </MenuItem>
         </Select>
         <InputLabel id="rating-select">Rating</InputLabel>
         <Select onChange={handleChange} name='rating' value={getFilterValues.rating}>

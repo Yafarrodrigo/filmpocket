@@ -1,5 +1,4 @@
-import { Movie } from "../Home/Home"
-//import styles from "./MovieCard.module.css"
+import { Movie } from "../../store/moviesStore"
 import { Card, CardMedia, Box,Typography, CardContent, Rating } from "@mui/material"
 
 
@@ -28,9 +27,7 @@ function MovieCard({movieDetails}:MovieProps) {
         </Box>
         <CardContent sx={{padding:'5px'}}>
           <Box component="div" height={'100px'} overflow={'hidden'} sx={{ textOverflow: 'ellipsis' }} >
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate facilis neque eius, culpa voluptates autem alias iste cum iusto, corrupti aspernatur a enim id voluptatem. Perferendis assumenda aliquam vitae fuga?
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate facilis neque eius, culpa voluptates autem alias iste cum iusto, corrupti aspernatur a enim id voluptatem. Perferendis assumenda aliquam vitae fuga?
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate facilis neque eius, culpa voluptates autem alias iste cum iusto, corrupti aspernatur a enim id voluptatem. Perferendis assumenda aliquam vitae fuga?
+            {movieDetails.desc}
           </Box>
         </CardContent>
       </Box>
