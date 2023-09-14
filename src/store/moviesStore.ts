@@ -1,14 +1,18 @@
 import { create } from 'zustand'
 import simDB from '../movieDB'
 
+type movieSubGenres = 'aliens' |'space' |'timeTravel' |'multiverse' |'futuristic'| 'robots'
+type movieTag = 'cyberpunk' | 'dystopic' | 'neo-noir' | 'police' | 'male protagonist' | 'future' | 
+                'spacecraft' | 'female protagonist' | 'foresight' | 'linguistics' | 'aliens' |
+                'science' | 'robots' | 'IA' | 'war' | 'time loop' | 'politics'
 export type Movie = {
     title: string
     year: number
     desc: string
     img: string
     rating: number
-    genre: string
-    tags: string[]
+    genre: movieSubGenres
+    tags: movieTag[]
  }
 export type MoviesList = Movie[]
 

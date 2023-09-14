@@ -23,7 +23,7 @@ function MovieCard({movieDetails}:MovieProps) {
           <Typography textAlign={'center'} >
             {`${movieDetails.title} (${movieDetails.year})`}
           </Typography>
-          <Rating sx={{marginLeft: 'auto'}} value={movieDetails.rating} readOnly />
+          <Rating sx={{marginLeft: 'auto'}} precision={0.5} value={movieDetails.rating} readOnly />
         </Box>
         <CardContent sx={{padding:'5px'}}>
           <Box component="div" height={'100px'} overflow={'hidden'} sx={{ textOverflow: 'ellipsis' }} >
