@@ -70,7 +70,7 @@ const simDB: simulatedDB = [
         img: "https://images.justwatch.com/poster/157451389/s592/dark-city-1998",
         year:1998,
         rating: 4,
-        genre: 'space',
+        genre: 'aliens',
         tags:['neo-noir', 'aliens', 'male protagonist', 'police'],
         desc: "John Murdoch awakens alone in a strange hotel to find that he has lost his memory and is wanted for a series of brutal and bizarre murders. While trying to piece together his past, he stumbles upon a fiendish underworld controlled by a group of beings known as The Strangers who possess the ability to put people to sleep and alter the city and its inhabitants. Now Murdoch must find a way to stop them before they take control of his mind and destroy him."
     },
@@ -82,6 +82,15 @@ const simDB: simulatedDB = [
         genre: 'space',
         tags:['aliens', 'spacecraft', 'science', ],
         desc: "Life tells the story of the six-member crew of the International Space Station that is on the cutting edge of one of the most important discoveries in human history: the first evidence of extraterrestrial life on Mars. As the crew begins to conduct research, their methods end up having unintended consequences and the life form proves more intelligent than anyone ever expected."
+    },
+    {
+        title:"Metropolis",
+        img: "https://m.media-amazon.com/images/I/51xSTnAL2BL._AC_UF894,1000_QL80_.jpg",
+        year:1927,
+        rating: 4,
+        genre: 'futuristic',
+        tags:['future', 'politics','dystopic','robots','science'],
+        desc: "Sometime in the future, the city of Metropolis is home to a Utopian society where its wealthy residents live a carefree life. One of those is Freder Fredersen. One day, he spots a beautiful woman with a group of children, she and the children quickly disappear. Trying to follow her, he is horrified to find an underground world of workers who apparently run the machinery that keeps the Utopian world above ground functioning. One of the few people above ground who knows about the world below is Freder's father, John Fredersen, who is the founder and master of Metropolis. Freder learns that the woman is called Maria, who espouses the need to join the 'hands' - the workers - to the 'head' - those in power above - by a mediator who will act as the heart. Freder wants to help the plight of the workers in their struggle for a better life. But when John learns of what Maria is advocating and that Freder has joined their cause, with the assistance of an old colleague. an inventor called Rotwang, who turns out to be But their nemesis goes to works towards quashing a proposed uprising, with Maria at the centre of their plan. John, unaware that Rotwang has his own agenda., makes plans that include shutting down the machines, with the prospect of unleashing total anarchy both above and below ground."
     }
 ]
 

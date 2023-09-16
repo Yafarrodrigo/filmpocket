@@ -29,15 +29,15 @@ export default function Filters() {
         </Select>
       <InputLabel id="year-select">Year</InputLabel>
         <Select onChange={handleChange} name='year' value={getFilterValues.year}>
-          <MenuItem value={'1'}> All </MenuItem>
-          <MenuItem value={'2020'}> 2020 + </MenuItem>
-          <MenuItem value={'2010'}> 2010 + </MenuItem>
-          <MenuItem value={'2000'}> 2000 + </MenuItem>
-          <MenuItem value={'1990'}> 1990 + </MenuItem>
-          <MenuItem value={'1980'}> 1980 + </MenuItem>
-          <MenuItem value={'1970'}> 1970 + </MenuItem>
-          <MenuItem value={'1960'}> 1960 + </MenuItem>
-          <MenuItem value={'1950'}> ...1950 + </MenuItem>
+          <MenuItem value={'0'}> All </MenuItem>
+          <MenuItem value={'2020'}> 2020  </MenuItem>
+          <MenuItem value={'2010'}> 2010  </MenuItem>
+          <MenuItem value={'2000'}> 2000  </MenuItem>
+          <MenuItem value={'1990'}> 1990  </MenuItem>
+          <MenuItem value={'1980'}> 1980  </MenuItem>
+          <MenuItem value={'1970'}> 1970  </MenuItem>
+          <MenuItem value={'1960'}> 1960  </MenuItem>
+          <MenuItem value={'1950'}> ...1950 </MenuItem>
         </Select>
         <InputLabel id="rating-select">Rating</InputLabel>
         <Select onChange={handleChange} name='rating' value={getFilterValues.rating}>

@@ -32,6 +32,22 @@ interface state {
     changeFilterValues: (which:string, value:string) => void
 }
 
+const checkYear = (mov: Movie, rawYearInput:string) => {
+    const year = rawYearInput !== 'all' ? parseInt(rawYearInput) : 0
+    return (mov.year >= year && mov.year <= year+9) || year === 0 || (year === 1950 && mov.year <= year+9)
+
+}
+const checkGenre = (mov: Movie, genre:string) => {
+    return (mov.genre === genre) || genre === 'all'
+}
+const checkRating = (mov: Movie, rating:number) => {
+    return mov.rating >= rating
+}
+
+const filtersCheck = (mov: Movie, genre: string,year:string,rating:number) => {
+    return checkYear(mov,year) && checkGenre(mov,genre) && checkRating(mov,rating)
+}
+
 export const useMoviesStore = create<state>((set,get) => {
     return{
         movies: [],
@@ -39,7 +55,7 @@ export const useMoviesStore = create<state>((set,get) => {
         allTags: ['cyberpunk','dystopic','futuristic','neo-noir','police','robots'],
         filters: {
             genre: 'all',
-            year: '1',
+            year: '0',
             rating: '0',
             search: ''
         },
@@ -57,7 +73,7 @@ export const useMoviesStore = create<state>((set,get) => {
                 ...state,
                 filters: {
                     ...state.filters,
-                    year: '1',
+                    year: '0',
                     genre: 'all',
                     rating: '0',
                 },
@@ -65,23 +81,13 @@ export const useMoviesStore = create<state>((set,get) => {
             }))
         },
         updateFilteredList: () => {
-            const year = parseInt(get().filters.year)
+            const {year, genre} = get().filters
             const rating = parseInt(get().filters.rating)
-            const genre = get().filters.genre
-            const genreSelected = genre !== 'all' ? true : false
-            if(genreSelected){
-                set((state) => ({
-                    ...state,
-                    filteredMovies: state.movies.filter( mov => mov.year >= year && mov.rating >= rating && mov.genre === genre)
-                    .filter(mov => mov.title.toLowerCase().includes(state.filters.search.toLowerCase()))
-                }))
-            }else{
-                set((state) => ({
-                    ...state,
-                    filteredMovies: state.movies.filter( mov => mov.year >= year && mov.rating >= rating)
-                    .filter(mov => mov.title.toLowerCase().includes(state.filters.search.toLowerCase()))
-                }))
-            }
+            set((state) => ({
+                ...state,
+                filteredMovies: state.movies.filter((mov) => filtersCheck(mov, genre,year,rating))
+                .filter(mov => mov.title.toLowerCase().includes(state.filters.search.toLowerCase()))
+            }))
         },
         getMovies: () => {
             set((state) => ({
