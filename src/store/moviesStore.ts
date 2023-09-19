@@ -52,7 +52,9 @@ export const useMoviesStore = create<state>((set,get) => {
     return{
         movies: [],
         filteredMovies: [],
-        allTags: ['cyberpunk','dystopic','futuristic','neo-noir','police','robots'],
+        allTags: ['cyberpunk' , 'dystopic' , 'neo-noir' , 'police' , 'male protagonist' , 'future' , 
+        'spacecraft' , 'female protagonist' , 'foresight' , 'linguistics' , 'aliens' ,
+        'science' , 'robots' , 'IA' , 'war' , 'time loop' , 'politics'],
         filters: {
             genre: 'all',
             year: '0',
@@ -86,7 +88,9 @@ export const useMoviesStore = create<state>((set,get) => {
             set((state) => ({
                 ...state,
                 filteredMovies: state.movies.filter((mov) => filtersCheck(mov, genre,year,rating))
-                .filter(mov => mov.title.toLowerCase().includes(state.filters.search.toLowerCase()))
+                .filter(mov => mov.title.toLowerCase().includes(state.filters.search.toLowerCase()) ||
+                                mov.genre.toLowerCase().includes(state.filters.search.toLowerCase()) ||
+                                mov.year.toString().includes(state.filters.search))
             }))
         },
         getMovies: () => {

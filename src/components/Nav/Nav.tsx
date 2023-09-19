@@ -1,8 +1,12 @@
-import { Box, Stack, Button, Divider } from '@mui/material'
+import { Box, Stack, Button, Divider, ListItem } from '@mui/material'
+import { useMoviesStore } from '../../store/moviesStore'
 
 export default function Nav() {
+
+  const allTags = useMoviesStore( state => state.allTags)
+
   return (
-    <Box width={'100vw'} sx={{backgroundColor: '#1e1e1e'}}>
+    <Box sx={{width: '100vw', backgroundColor: '#1e1e1e'}}>
         <Stack
             direction="row"
             justifyContent={'center'}
@@ -10,11 +14,11 @@ export default function Nav() {
             spacing={2}
             sx={{margin:'auto', width: '75%', padding:'5px'}}
             >
-                <Button sx={{ width: '250px' }}> item 1 </Button>
-                <Button sx={{ width: '250px' }}> item 2 </Button>
-                <Button sx={{ width: '250px' }}> item 3 </Button>
-                <Button sx={{ width: '250px' }}> item 4 </Button>
-                <Button sx={{ width: '250px' }}> item 5 </Button>
+              {allTags.map( (tag,index) => (
+                <ListItem sx={{p:0}} key={index}>
+                  <Button sx={{fontSize: '0.75rem'}} > {tag} </Button>
+                </ListItem>
+              ))}
         </Stack>
     </Box>
   )

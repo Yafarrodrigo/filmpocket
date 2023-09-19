@@ -91,6 +91,42 @@ const simDB: simulatedDB = [
         genre: 'futuristic',
         tags:['future', 'politics','dystopic','robots','science'],
         desc: "Sometime in the future, the city of Metropolis is home to a Utopian society where its wealthy residents live a carefree life. One of those is Freder Fredersen. One day, he spots a beautiful woman with a group of children, she and the children quickly disappear. Trying to follow her, he is horrified to find an underground world of workers who apparently run the machinery that keeps the Utopian world above ground functioning. One of the few people above ground who knows about the world below is Freder's father, John Fredersen, who is the founder and master of Metropolis. Freder learns that the woman is called Maria, who espouses the need to join the 'hands' - the workers - to the 'head' - those in power above - by a mediator who will act as the heart. Freder wants to help the plight of the workers in their struggle for a better life. But when John learns of what Maria is advocating and that Freder has joined their cause, with the assistance of an old colleague. an inventor called Rotwang, who turns out to be But their nemesis goes to works towards quashing a proposed uprising, with Maria at the centre of their plan. John, unaware that Rotwang has his own agenda., makes plans that include shutting down the machines, with the prospect of unleashing total anarchy both above and below ground."
+    },
+    {
+        title:"Coherence",
+        img: "https://pics.filmaffinity.com/Coherence-280180556-large.jpg",
+        year:2013,
+        rating: 3.5,
+        genre: 'multiverse',
+        tags:['female protagonist','science'],
+        desc: "On the night of an astronomical anomaly, eight friends at a dinner party experience a troubling chain of reality bending events."
+    },
+    {
+        title:"Triangle",
+        img: "https://m.media-amazon.com/images/M/MV5BY2VlODI5ZmMtZDExYS00OWI4LWJiMWItZWZkZWRkNzlmZWI2XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_FMjpg_UX1000_.jpg",
+        year:2009,
+        rating: 3.5,
+        genre: 'multiverse',
+        tags:['female protagonist'],
+        desc: "When Jess sets sail on a yacht with a group of friends, she cannot shake the feeling that there is something wrong. Her suspicions are realized when the yacht hits a storm and the group is forced to board a passing ocean liner to get to safety, a ship Jess is convinced she's been on before. The ship appears deserted, the clock on board has stopped, but they are not alone... Someone is intent on hunting them down, one by one. And Jess unknowingly holds the key to end the terror."
+    },
+    {
+        title:"Alien",
+        img: "https://pics.filmaffinity.com/Alien_el_octavo_pasajero-820400554-large.jpg",
+        year:1979,
+        rating: 4,
+        genre: 'aliens',
+        tags:['female protagonist','aliens','spacecraft','future'],
+        desc: "In the distant future, the crew of the commercial spaceship 'Nostromo' is on its way home when the crew picks up a distress call from a distant moon. The crew is under obligation to investigate and the spaceship descends on the small planetoid afterward. After a rough landing, three crew members leave the spaceship to explore the area on the planetoid. At the same time as the crew discovers a hive colony of some unknown creature, the ship's computer deciphers the message to be a warning, not a distress call. When one of the eggs is disturbed, the crew realizes that it is not alone on the spaceship and it must deal with the consequences."
+    },
+    {
+        title:"2001: A Space Odyssey",
+        img: "https://m.media-amazon.com/images/I/71uoIeVduJL._AC_UF894,1000_QL80_.jpg",
+        year:1968,
+        rating: 4,
+        genre: 'space',
+        tags:['male protagonist','science','spacecraft','future','IA'],
+        desc: "'2001' is a story of evolution. Sometime in the distant past, someone or something nudged evolution by placing a monolith on Earth (presumably elsewhere throughout the universe as well). Evolution then enabled humankind to reach the moon's surface, where yet another monolith is found, one that signals the monolith placers that humankind has evolved that far. Now mankind, assisted by artificial intelligence (such as HAL), must dare to encounter the monolith placers. If successful, the next step in evolution--whatever it is--will be achieved."
     }
 ]
 
