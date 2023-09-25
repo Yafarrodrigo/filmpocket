@@ -6,7 +6,7 @@ export default function Nav() {
   const allTags = useMoviesStore( state => state.allTags)
 
   return (
-    <Box sx={{width: '100vw', backgroundColor: '#1e1e1e'}}>
+    <Box sx={{width: '100vw', backgroundColor: '#1e1e1e', display:{xs:'none',sm:'block'}}}>
         <Stack
             direction="row"
             justifyContent={'center'}

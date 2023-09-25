@@ -15,8 +15,8 @@ export default function Filters() {
 
   const getFilterValues = useMoviesStore( state => state.filters) 
   return (
-    <Box sx={{width: '200px'}}>
-      <Button size='large' sx={{margin: '25px 10px', width: '90%', fontSize:'0.9rem'}} onClick={resetFilters} variant="outlined">Reset Filters</Button>
+    <Box sx={{width: {md:'25%',lg:'15%'}, display:{xs:'none',sm:'block'}}}>
+      <Button size='large' sx={{margin: '25px 10px', width: 'auto', fontSize:'0.9rem'}} onClick={resetFilters} variant="outlined">Reset Filters</Button>
       <Stack>
       <InputLabel id="genre-select">Sub-Genre</InputLabel>
         <Select onChange={handleChange} name='genre' value={getFilterValues.genre}>

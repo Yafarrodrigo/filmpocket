@@ -19,11 +19,11 @@ function MovieCard({movieDetails}:MovieProps) {
         />
       </Box>
       <Box sx={{display:'flex', flexDirection:'column', width:'100%' }} >
-        <Box width={'100%'} display={'flex'} sx={{backgroundColor:'#101010', cursor:'pointer'}}>
+        <Box width={'100%'} display={'flex'} flexDirection={'column'} sx={{backgroundColor:'#101010', cursor:'pointer'}}>
           <Typography textAlign={'center'} >
             {`${movieDetails.title} (${movieDetails.year})`}
           </Typography>
-          <Rating sx={{marginLeft: 'auto'}} precision={0.5} value={movieDetails.rating} readOnly />
+          <Rating sx={{alignSelf: 'center'}} precision={0.5} value={movieDetails.rating} readOnly />
         </Box>
         <CardContent sx={{padding:'5px'}}>
           <Box component="div" height={'100px'} overflow={'hidden'} sx={{ textOverflow: 'ellipsis' }} >
