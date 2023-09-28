@@ -1,9 +1,9 @@
-import Filters from '../Filters/Filters'
 import MoviesListContainer from '../MoviesList/MoviesListContainer'
 import { Box } from '@mui/material'
 import { useMoviesStore } from '../../store/moviesStore'
 import { useEffect } from 'react'
 import { MoviesList } from '../../store/moviesStore'
+import SideBar from '../SideBar/SideBar'
 
 
 function Home() {
@@ -19,7 +19,7 @@ function Home() {
 
   return (
     <Box sx={{width:'100vw', display:'flex'}}>
-      <Filters />
+      <SideBar />
       <MoviesListContainer movies={moviesList}/>
     </Box>
   )

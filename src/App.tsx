@@ -1,6 +1,6 @@
 import Home from './components/Home/Home'
 import Header from './components/Header/Header'
-import Nav from './components/Nav/Nav'
+import Tags from './components/Tags/Tags'
 import { Box } from '@mui/material'
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
   return (
     <Box>
       <Header />
-      <Nav />
+      <Tags />
       <Home />
     </Box>
   )

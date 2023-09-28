@@ -1,6 +1,5 @@
-import {AppBar,Toolbar, Typography, Box, InputBase, IconButton, Button} from '@mui/material'
+import {AppBar,Toolbar, Typography, Box, InputBase, Button} from '@mui/material'
 import { useMoviesStore } from '../../store/moviesStore';
-import SearchIcon from '@mui/icons-material/Search';
 
 function Header() {
 
@@ -10,6 +9,11 @@ function Header() {
   
   const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => {
     changeFilterValues('search', e.target.value)
+    updateFilteredMovies()
+  }
+
+  const resetSearch = () => {
+    changeFilterValues('search', '')
     updateFilteredMovies()
   }
 
@@ -27,10 +31,7 @@ function Header() {
           name='search'
           value={filters.search}
         />
-        <IconButton type="button" sx={{ p: '10px',backgroundColor:'#090909',borderBottomRightRadius:'10px',borderTopRightRadius:'10px',borderBottomLeftRadius:'0px',borderTopLeftRadius:'0px' }} aria-label="search">
-          <SearchIcon />
-        </IconButton>
-        <Button sx={{padding: '15px'}} >Reset</Button>
+        <Button onClick={resetSearch} sx={{padding: '15px', backgroundColor:'#222', borderRadius:'0', borderBottomRightRadius:'10px',borderTopRightRadius:'10px'}} >Reset</Button>
         </Box>
       </Toolbar>
     </AppBar>

@@ -1,7 +1,7 @@
 import { Box, Stack, Button, Divider, ListItem } from '@mui/material'
 import { useMoviesStore } from '../../store/moviesStore'
 
-export default function Nav() {
+export default function Tags() {
 
   const allTags = useMoviesStore( state => state.allTags)
 
