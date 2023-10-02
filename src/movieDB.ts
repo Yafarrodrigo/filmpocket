@@ -127,6 +127,33 @@ const simDB: simulatedDB = [
         genre: 'space',
         tags:['male protagonist','science','spacecraft','future','IA'],
         desc: "'2001' is a story of evolution. Sometime in the distant past, someone or something nudged evolution by placing a monolith on Earth (presumably elsewhere throughout the universe as well). Evolution then enabled humankind to reach the moon's surface, where yet another monolith is found, one that signals the monolith placers that humankind has evolved that far. Now mankind, assisted by artificial intelligence (such as HAL), must dare to encounter the monolith placers. If successful, the next step in evolution--whatever it is--will be achieved."
+    },
+    {
+        title:"The Matrix",
+        img: "https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg",
+        year:1999,
+        rating: 4.5,
+        genre: 'futuristic',
+        tags:['male protagonist','dystopic','future','IA'],
+        desc: "Thomas A. Anderson is a man living two lives. By day he is an average computer programmer and by night a hacker known as Neo. Neo has always questioned his reality, but the truth is far beyond his imagination. Neo finds himself targeted by the police when he is contacted by Morpheus, a legendary computer hacker branded a terrorist by the government. As a rebel against the machines, Neo must confront the agents: super-powerful computer programs devoted to stopping Neo and the entire human rebellion."
+    },
+    {
+        title:"Event Horizon",
+        img: "https://m.media-amazon.com/images/M/MV5BZGI0NDMwNjAtNGEzNC00MzA1LTlkMjQtYjBkYTZlZjAyZWEyXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg",
+        year:1997,
+        rating: 3.5,
+        genre: 'space',
+        tags:["hell", "spacecraft", "future"],
+        desc: "In the year 2047 a group of astronauts are sent to investigate and salvage the long lost starship 'Event Horizon'. The ship disappeared mysteriously 7 years before on its maiden voyage and with its return comes even more mystery as the crew of the 'Lewis and Clark' discover the real truth behind its disappearance and something even more terrifying."
+    },
+    {
+        title:"Starship Troopers",
+        img: "",
+        year:1997,
+        rating: 3.5,
+        genre: 'aliens',
+        tags:["aliens","dystopic","future","male protagonist","spacecraft","war"],
+        desc: "In a not-so-distant future, with the Earth governed by the militaristic United Citizen Federation and multitudes of highly evolved Klendathu Arachnids threatening the safety of our solar system, high-school athlete Johnny Rico and three of his hometown friends join up to do their part. And to ensure humankind's future, an all-out invasion has begun; however, in this far-off exoplanet hostile to life as we know it, brute force alone and conventional strategies won't cut it. Now, the unstoppable Bug Army is at the gates. Will Rico and his fellow Starship Troopers end up serving as cannon fodder?"
     }
 ]
 

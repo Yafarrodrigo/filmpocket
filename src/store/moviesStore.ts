@@ -4,7 +4,7 @@ import simDB from '../movieDB'
 type movieSubGenres = 'aliens' |'space' |'timeTravel' |'multiverse' |'futuristic'| 'robots'
 type movieTag = 'cyberpunk' | 'dystopic' | 'neo-noir' | 'police' | 'male protagonist' | 'future' | 
                 'spacecraft' | 'female protagonist' | 'foresight' | 'linguistics' | 'aliens' |
-                'science' | 'robots' | 'IA' | 'war' | 'time loop' | 'politics'
+                'science' | 'robots' | 'IA' | 'war' | 'time loop' | 'politics' | "hell"
 export type Movie = {
     title: string
     year: number
