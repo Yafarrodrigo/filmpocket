@@ -4,7 +4,7 @@ type simulatedDB = Movie[]
 const simDB: simulatedDB = [
     {
         title:"Blade Runner",
-        img: "https://culturageek.com.ar/wp-content/uploads/2022/06/Blade-Runner-poster-www.culturageek.com_.ar_.jpg",
+        img: "./images/bladerunner.jpg",
         year:1982,
         rating: 5,
         genre: 'futuristic',
@@ -13,7 +13,7 @@ const simDB: simulatedDB = [
     },
     {
         title:"Blade Runner 2049",
-        img: "https://m.media-amazon.com/images/M/MV5BNzA1Njg4NzYxOV5BMl5BanBnXkFtZTgwODk5NjU3MzI@._V1_FMjpg_UX1000_.jpg",
+        img: "./images/bladerunner2049.jpg",
         year:2017,
         rating: 5,
         genre: 'futuristic',
@@ -22,7 +22,7 @@ const simDB: simulatedDB = [
     },
     {
         title:"Arrival",
-        img: "https://pics.filmaffinity.com/La_llegada-150207636-large.jpg",
+        img: "./images/arrival.jpg",
         year:2016,
         rating: 4,
         genre: 'space',
@@ -31,7 +31,7 @@ const simDB: simulatedDB = [
     },
     {
         title:"Ex Machina",
-        img: "https://images.justwatch.com/poster/257194156/s718/ex-machina.jpg",
+        img: "./images/exmachina.jpg",
         year:2014,
         rating: 4,
         genre: 'robots',
@@ -40,7 +40,7 @@ const simDB: simulatedDB = [
     },
     {
         title:"Edge of Tomorrow",
-        img: "https://m.media-amazon.com/images/M/MV5BMTc5OTk4MTM3M15BMl5BanBnXkFtZTgwODcxNjg3MDE@._V1_.jpg",
+        img: "./images/edgeoftomorrow.jpg",
         year:2014,
         rating: 4,
         genre: 'timeTravel',
@@ -49,7 +49,7 @@ const simDB: simulatedDB = [
     },
     {
         title:"Dune",
-        img: "https://pics.filmaffinity.com/Dune-209834814-large.jpg",
+        img: "./images/newdune.jpg",
         year:2021,
         rating: 4,
         genre: 'space',
@@ -58,7 +58,7 @@ const simDB: simulatedDB = [
     },
     {
         title:"Dune",
-        img: "https://m.media-amazon.com/images/M/MV5BYTAzYzNlMDMtMGRjYS00M2UxLTk0MmEtYmE4YWZiYmEwOTIwL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNzc5MjA3OA@@._V1_.jpg",
+        img: "./images/dune.jpg",
         year:1984,
         rating: 3.5,
         genre: 'space',
@@ -67,7 +67,7 @@ const simDB: simulatedDB = [
     },
     {
         title:"Dark City",
-        img: "https://images.justwatch.com/poster/157451389/s592/dark-city-1998",
+        img: "./images/darkcity.jpg",
         year:1998,
         rating: 4,
         genre: 'aliens',
@@ -76,7 +76,7 @@ const simDB: simulatedDB = [
     },
     {
         title:"Life",
-        img: "https://m.media-amazon.com/images/M/MV5BMzAwMmQxNTctYjVmYi00MDdlLWEzMWUtOTE5NTRiNDhhNjI2L2ltYWdlXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg",
+        img: "./images/life.jpg",
         year:2017,
         rating: 3.5,
         genre: 'space',
@@ -85,7 +85,7 @@ const simDB: simulatedDB = [
     },
     {
         title:"Metropolis",
-        img: "https://m.media-amazon.com/images/I/51xSTnAL2BL._AC_UF894,1000_QL80_.jpg",
+        img: "./images/metropolis.jpg",
         year:1927,
         rating: 4,
         genre: 'futuristic',
@@ -94,7 +94,7 @@ const simDB: simulatedDB = [
     },
     {
         title:"Coherence",
-        img: "https://pics.filmaffinity.com/Coherence-280180556-large.jpg",
+        img: "./images/coherence.jpg",
         year:2013,
         rating: 3.5,
         genre: 'multiverse',
@@ -103,7 +103,7 @@ const simDB: simulatedDB = [
     },
     {
         title:"Triangle",
-        img: "https://m.media-amazon.com/images/M/MV5BY2VlODI5ZmMtZDExYS00OWI4LWJiMWItZWZkZWRkNzlmZWI2XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_FMjpg_UX1000_.jpg",
+        img: "./images/triangle.jpg",
         year:2009,
         rating: 3.5,
         genre: 'multiverse',
@@ -112,7 +112,7 @@ const simDB: simulatedDB = [
     },
     {
         title:"Alien",
-        img: "https://pics.filmaffinity.com/Alien_el_octavo_pasajero-820400554-large.jpg",
+        img: "./images/alien.jpg",
         year:1979,
         rating: 4,
         genre: 'aliens',
@@ -121,7 +121,7 @@ const simDB: simulatedDB = [
     },
     {
         title:"2001: A Space Odyssey",
-        img: "https://m.media-amazon.com/images/I/71uoIeVduJL._AC_UF894,1000_QL80_.jpg",
+        img: "./images/2001.jpg",
         year:1968,
         rating: 4,
         genre: 'space',
@@ -130,7 +130,7 @@ const simDB: simulatedDB = [
     },
     {
         title:"The Matrix",
-        img: "https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg",
+        img: "./images/thematrix.jpg",
         year:1999,
         rating: 4.5,
         genre: 'futuristic',
@@ -139,7 +139,7 @@ const simDB: simulatedDB = [
     },
     {
         title:"Event Horizon",
-        img: "https://m.media-amazon.com/images/M/MV5BZGI0NDMwNjAtNGEzNC00MzA1LTlkMjQtYjBkYTZlZjAyZWEyXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg",
+        img: "./images/eventhorizon.jpg",
         year:1997,
         rating: 3.5,
         genre: 'space',
@@ -148,7 +148,7 @@ const simDB: simulatedDB = [
     },
     {
         title:"Starship Troopers",
-        img: "",
+        img: "./images/starshiptroopers.jpg",
         year:1997,
         rating: 3.5,
         genre: 'aliens',
