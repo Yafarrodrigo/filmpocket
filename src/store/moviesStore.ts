@@ -19,14 +19,17 @@ export type MoviesList = Movie[]
 interface state {
     movies: Movie[]
     filteredMovies: Movie[]
+    favoriteMovies: string[]
     allTags: string[]
     filters: {
-        genre: string,
-        year: string,
+        genre: string
+        year: string
         rating: string
         search: string
     }
-    getMovies: () => void,
+    favMovie: (movieTitle:string) => void
+    unfavMovie: (movieTitle:string) => void
+    getMovies: () => void
     resetFilters: () => void
     updateFilteredList: () => void
     changeFilterValues: (which:string, value:string) => void
@@ -52,6 +55,7 @@ export const useMoviesStore = create<state>((set,get) => {
     return{
         movies: [],
         filteredMovies: [],
+        favoriteMovies: [],
         allTags: ['cyberpunk' , 'dystopic' , 'neo-noir' , 'police' , 'male protagonist' , 'future' , 
         'spacecraft' , 'female protagonist' , 'foresight' , 'linguistics' , 'aliens' ,
         'science' , 'robots' , 'IA' , 'war' , 'time loop' , 'politics'],
@@ -69,6 +73,22 @@ export const useMoviesStore = create<state>((set,get) => {
                     [which]: value
                 }
             }))
+        },
+        favMovie: (movieTitle:string) => {
+            if(get().favoriteMovies.includes(movieTitle) === false){
+                set((state) => ({
+                    ...state,
+                    favoriteMovies: [...state.favoriteMovies, movieTitle]
+                }))
+            }
+        },
+        unfavMovie: (movieTitle:string) => {
+            if(get().favoriteMovies.includes(movieTitle) === true){
+                set((state) => ({
+                    ...state,
+                    favoriteMovies: state.favoriteMovies.filter( mov => mov !== movieTitle)
+                }))
+            }
         },
         resetFilters: () => {
             set((state) => ({
