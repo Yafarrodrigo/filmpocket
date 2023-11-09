@@ -52,10 +52,17 @@ const filtersCheck = (mov: Movie, genre: string,year:string,rating:number) => {
 }
 
 export const useMoviesStore = create<state>((set,get) => {
+    const checkFavs = window.localStorage.getItem('fp_favs')
+    let favMovies: string[] = []
+    if(checkFavs){
+        favMovies = <string[]>JSON.parse(checkFavs)
+    }else{
+        favMovies = []
+    }
     return{
         movies: [],
         filteredMovies: [],
-        favoriteMovies: [],
+        favoriteMovies: favMovies,
         allTags: ['cyberpunk' , 'dystopic' , 'neo-noir' , 'police' , 'male protagonist' , 'future' , 
         'spacecraft' , 'female protagonist' , 'foresight' , 'linguistics' , 'aliens' ,
         'science' , 'robots' , 'IA' , 'war' , 'time loop' , 'politics'],
@@ -80,6 +87,7 @@ export const useMoviesStore = create<state>((set,get) => {
                     ...state,
                     favoriteMovies: [...state.favoriteMovies, movieTitle]
                 }))
+                window.localStorage.setItem('fp_favs', JSON.stringify(get().favoriteMovies))
             }
         },
         unfavMovie: (movieTitle:string) => {
@@ -88,6 +96,7 @@ export const useMoviesStore = create<state>((set,get) => {
                     ...state,
                     favoriteMovies: state.favoriteMovies.filter( mov => mov !== movieTitle)
                 }))
+                window.localStorage.setItem('fp_favs', JSON.stringify(get().favoriteMovies))
             }
         },
         resetFilters: () => {
